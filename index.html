@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* flex direction */
+        /* row (default) row-reverse column column reverse */
+
+        /* flex wrap */
+        /* nowrap(default) wrap wrap-reverse */
+
+        /* justify-content horizontal alignment */
+        /* flex-start(default) flex-end center*/
+        /* evenly distributed */
+        /* space-between first item start last end */
+        /* space-around side margins */
+        /* space-evenly even margins */
+
+        /* align-items vertical alignmetn */
+        /* stretch (default), flex-start, flex-end, center, baseline */
+
+
+        .container{
+            height: 300px;
+            /* height: 50vh; */
+            display: flex;
+            
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+
+            /* align-items: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            align-items: center;
+            /* align-items: baseline; */
+
+            /* align-content: stretch; */
+            /* align-content: flex-end; */
+            /* align-content: flex-start; */
+            /* align-content: center; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            
+        }
+        .container-1{
+            height: 800px;
+            border: 5px solid blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* <-- order === all children have order:0 by default --> */
+        .box-1{
+            order: 1;
+        }
+        .box-5{
+            order: -1;
+        }
+
+        /*   -- align-self --  */
+        /* .box-5 {
+            align-self: flex-end;
+        } */
+
+        /* --- flox-grow all children have flox-grow:0  -- */
+        /* .box {
+            flex-grow: 1;
+        } */
+        .box-1{
+            flex-grow: 1;
+        }
+        .box-5{
+            flex-grow: 2;
+        }
+
+        /* -- flex-shink all children have flex-shink:1 -- */
+        .box-2{
+            width: 60px;
+            flex-shrink: 0;
+        }
+
+        /* -- flex-basis base value and flex shortcut -- */
+        .box{
+            flex-basis: 150px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- parent = felx-container -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+
+        <!-- <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div> -->
+    </div>
+
+    <!-- <div class="container-1">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+    </div> -->
+    <a href="banner.html">Ir al Banner</a>
+</body>
+</html>
